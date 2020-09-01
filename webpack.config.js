@@ -7,7 +7,9 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: './index.js',
+    entry: {
+        main: ['@babel/polyfill', './index.js'],
+    },
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'public')
@@ -37,6 +39,17 @@ module.exports = {
                 use: {
                     loader: 'file-loader',
                 }
+            },
+            { test: /\.js$/, 
+                exclude: /node_modules/, 
+                loader: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ]
+                    }
+                } 
             }
         ]
     }
