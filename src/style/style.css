@@ -204,16 +204,6 @@ body {
   outline: none;
 }
 
-/*
-.for-purchase__button-text:after {
-  content: '';
-
-  width: 100%;
-  position: absolute;
-  left: 0;
-  border-bottom: 1px dashed #1698D9;
-}
-*/
 .product-card {
   position: relative;
 }

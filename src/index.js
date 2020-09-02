@@ -35,8 +35,7 @@ function onCardClick() {
    let onMouseLeave;
 
    return (e) => {
-      const { target } = e;
-      const card = target.closest(ClassNames.card);
+      const { target: card } = e;
 
       onMouseEnter = onMouseEnter || toggleDescription.bind(null, card, false);
       onMouseLeave = onMouseLeave || toggleDescription.bind(null, card, true);
@@ -57,19 +56,19 @@ function onCardClick() {
    };
 }
 function onBuyButtonClick(button) {
-   const card = button.closest(ClassNames.itemWrapper).querySelector(ClassNames.card);
+   const card = button.parentElement.parentElement.querySelector(ClassNames.card);
 
    card.click();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-   const cards = document.querySelectorAll(`${ClassNames.card}:not(${ClassNames.disabled})`);
-   const buyButtons = document.querySelectorAll(ClassNames.buyButton);
+   const cards = [...document.querySelectorAll(`${ClassNames.card}:not(${ClassNames.disabled})`)];
+   const buyButtons = [...document.querySelectorAll(ClassNames.buyButton)];
 
    cards.forEach(card => {
       card.addEventListener('click', onCardClick());
 
-      if (card.matches(ClassNames.secondCard)) {
+      if (card.classList.contains(getClassnameWithoutDot(ClassNames.secondCard))) {
          card.click();
       }
    });

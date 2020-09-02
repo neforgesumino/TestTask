@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Exo 2.0';
     src: url("../fonts/Exo2.0-Thin.otf") format('opentype');
+    src: url('../fonts/Exo2.0-Thin.eot');
     font-style: normal;
   }
   

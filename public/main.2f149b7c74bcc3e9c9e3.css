@@ -351,6 +351,7 @@ template {
 @font-face {
     font-family: 'Exo 2.0';
     src: url(51c257bfa8ec3e0cfb4bb850711b22c7.otf) format('opentype');
+    src: url(e4a74b480f3d85b10ccae9ab1dc68e85.eot);
     font-style: normal;
   }
   
@@ -557,16 +558,6 @@ body {
   outline: none;
 }
 
-/*
-.for-purchase__button-text:after {
-  content: '';
-
-  width: 100%;
-  position: absolute;
-  left: 0;
-  border-bottom: 1px dashed #1698D9;
-}
-*/
 .product-card {
   position: relative;
 }
