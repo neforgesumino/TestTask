@@ -16,7 +16,7 @@
   "browserList": [
     "> 1%",
     "last version",
-    "> 0.25%, not dead"
+    "not dead"
   ],
   "author": "Anna Shirshikova <anna.shirshikova97@gmail.com>",
   "license": "ISC",
