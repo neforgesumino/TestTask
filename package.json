@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [
     "testtask",
@@ -18,6 +20,7 @@
   ],
   "author": "Anna Shirshikova <anna.shirshikova97@gmail.com>",
   "license": "ISC",
+  "homegape": "https://neforgesumino.github.io/TestTask/",
   "devDependencies": {
     "@babel/core": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
@@ -35,6 +38,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
+    "gh-pages": "^3.1.0",
     "normalize.css": "^8.0.1"
   }
 }
