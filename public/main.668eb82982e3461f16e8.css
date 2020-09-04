@@ -350,8 +350,8 @@ template {
 
 @font-face {
     font-family: 'Exo 2.0';
+    src: url(4084a0fdcc86699d47c66b7e1b49fb79.woff) format("woff");
     src: url(51c257bfa8ec3e0cfb4bb850711b22c7.otf) format('opentype');
-    src: url(e4a74b480f3d85b10ccae9ab1dc68e85.eot);
     font-style: normal;
   }
   
@@ -411,7 +411,7 @@ body {
   font-size: 36px;
   line-height: 36px;
   font-family: 'Exo 2.0', sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   color: #ffffff;
   text-align: center;
   margin-top: 0;
